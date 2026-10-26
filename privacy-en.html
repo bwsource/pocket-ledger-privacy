@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="PocketLedger Privacy Policy · 私隱政策">
+<title>PocketLedger · Privacy Policy</title>
+<style>
+*{box-sizing:border-box}body{font:17px/1.8 system-ui,sans-serif;margin:0;background:#f7f9fc;color:#172033}
+main{width:calc(100% - 32px);max-width:860px;margin:32px auto;padding:32px;background:white;border-radius:19px}
+header{border-bottom:1px solid #dce5ef;padding-bottom:18px;margin-bottom:26px}.brand{font-size:1.3rem;font-weight:750;color:#0069c7}
+nav{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:12px}a{color:#0069c7;text-underline-offset:3px}
+nav a{display:inline-flex;align-items:center;min-height:44px}a:focus-visible{outline:3px solid #0069c7;outline-offset:4px}
+h1{font-size:clamp(1.55rem,5vw,2rem);line-height:1.35}h2{font-size:1.25rem;margin-top:2rem;line-height:1.45}
+p,h1,h2,a{overflow-wrap:anywhere}p{margin:0 0 1.15em}
+@media(max-width:600px){body{font-size:16px}main{width:100%;margin:0;padding:20px;border-radius:0}}
+@media(prefers-color-scheme:dark){body{background:#0f1115;color:#f2f4f8}main{background:#1b1e26}a,.brand{color:#6dbdff}header{border-color:#394656}}
+</style>
+</head>
+<body><main>
+<header><div class="brand">PocketLedger</div><nav aria-label="Language"><a href="privacy-zh-Hant.html" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a><a href="privacy-en.html" lang="en" hreflang="en">English</a></nav></header>
+<article>
+<h1>PocketLedger Privacy Policy</h1>
+<p>Updated: 26 October 2026. Applicable version: 0.16.6 Beta.</p>
+<h2>Contact and scope</h2>
+<p>This policy describes implemented processing in PocketLedger. Privacy enquiries and beta feedback: bw2629267443@gmail.com. The publisher&#x27;s legal identity and address remain to be confirmed. This document is not confirmation of Apple approval or legal compliance.</p>
+<h2>Local ledger and account data</h2>
+<p>Transactions, amounts, categories, notes, account names and UUIDs, opening balances, refund and fee relationships, pending drafts, notification evidence and matching records are stored as JSON in the app&#x27;s private container. Transactions and drafts may retain notification text containing names, account numbers, counterparties or references. Estimated balances are not live bank balances. PocketLedger has no proprietary bank login or server-based ledger sync.</p>
+<h2>Notifications, SMS, Gmail, Wallet and Shortcuts</h2>
+<p>The app processes content you supply through Shortcuts, screenshots or pasted text. It does not directly read the SMS database, Gmail mailbox or Wallet accounts. Titles, subtitles, bodies, source channels and apps depend on supplied fields and system capabilities and may be incomplete. You enable notification automations and permissions in Shortcuts and can disable them. Institution names and timestamps are textual evidence, not verification of identity, completion or account ownership.</p>
+<h2>Images and on-device AI</h2>
+<p>The system photo picker supplies selected payment screenshots. Apple Vision performs OCR on device. This source review found no app path that separately retains the selected image long term; extracted text can be saved in drafts. Foundation Models availability is checked, but the category suggestion function currently returns nil and does not invoke a model. No cloud AI API is integrated.</p>
+<h2>Exports, backups and optional cloud folders</h2>
+<p>Manual CSV exports may include notes, sources, account UUIDs and TEST labels. Full JSON backups can include the entire ledger, settings, drafts and notification evidence and are unencrypted. Encrypted .plbackup files use AES-GCM; the new format derives a password key using a random salt and PBKDF2-HMAC-SHA256, while legacy backups remain readable. Passwords and keys are not saved as app preferences. There is no password recovery service. Password strength, device security and who possesses a backup affect protection.</p>
+<p>If you enable the analysis channel and select a folder, the app can write an analysis CSV on launch, foregrounding or a manual sync request. It includes date, merchant, amount, currency, category, type and payment method, excluding notes and raw notifications; it remains sensitive financial data. Selecting an iCloud Drive, Google Drive or other provider folder can cause that provider to sync it externally and expose it to tools you authorize. PocketLedger does not sign in to those providers or run its own background cloud upload worker. The analysis folder and CSV are accessible only to you and the tools you independently choose and authorize; this feature does not grant the PocketLedger publisher access to that folder or CSV, and there is no publisher-controlled financial data collection backend. Disabling the channel stops future writes, not copies already exported or synced. Restoring a backup does not turn the analysis channel back on when it is currently disabled.</p>
+<h2>Purchase verification, third parties and support</h2>
+<p>Apple StoreKit verifies app and purchase entitlements. A designated TestFlight beta may offer time-limited free Pro testing, which is not a purchase. Verification may communicate with Apple services under Apple&#x27;s policies. Our code does not send ledger contents to StoreKit. Purchase UI and live products are not yet available. This source review found no third-party analytics, advertising or tracking SDK, or proprietary network API.</p>
+<p>The problem-report share action automatically includes only the app version and the description you type, not the ledger or logs. You choose the service, recipient and whether to send. If you email us, the developer and the email service receive what you provide. Do not send full bank notifications, account numbers, emails, names or references. Apple hosts the iCloud shortcut link; external sites and mail services have their own policies.</p>
+<h2>Diagnostics, retention and deletion</h2>
+<p>Receipt logs retain up to 200 entries. Other ledger records, drafts, discarded drafts and notification samples follow the existing controls and have no unified automatic expiry. Diagnostic views are excluded from public Release builds; authorized internal builds can display masked content. Rule-based masking does not guarantee removal of every identifying field. Necessary source text in the main ledger is not comprehensively masked.</p>
+<p>A restore retains a recovery copy in the private app container with no automatic retention deadline. Clearing the ledger is not the same as deleting separate diagnostic files, recovery copies or exported files; read the operation&#x27;s scope. Removing the app allows iOS to remove its private container; offloading and other system retention options differ. You must separately manage copies held by providers, recipients and exported backups. Contacting the developer cannot remotely erase your device or third-party copies.</p>
+<h2>Security and limitations</h2>
+<p>Face ID or device authentication provides an interface lock, not encryption of ledger.json. Sensitive local writes request iOS file protection available after the first device unlock to support background notifications. Actual protection depends on the device, passcode and iOS and has not completed physical-device verification. Core files attempt exclusion from system cloud backup; this is not a guarantee about every system or external copy. No system guarantees absolute security. Keep appropriate backups before upgrades, restores and sharing.</p>
+<h2>Privacy policy website hosting</h2>
+<p>The public policy website uses GitHub Pages hosting. GitHub may process IP addresses, device information and requests under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noreferrer">GitHub Privacy Statement</a>. The policy pages include no advertising, analytics scripts or external fonts; this does not mean the hosting provider keeps no access logs. The website has no ledger upload or data collection form.</p>
+<h2>Changes</h2>
+<p>Changes to processing will be reflected in the policy date and the in-app document. Updates to publisher details will also be reflected in the policy.</p>
+</article>
+</main></body></html>

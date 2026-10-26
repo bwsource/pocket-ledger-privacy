@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="PocketLedger Privacy Policy · 私隱政策">
+<title>PocketLedger · 私隱政策</title>
+<style>
+*{box-sizing:border-box}body{font:17px/1.8 system-ui,sans-serif;margin:0;background:#f7f9fc;color:#172033}
+main{width:calc(100% - 32px);max-width:860px;margin:32px auto;padding:32px;background:white;border-radius:19px}
+header{border-bottom:1px solid #dce5ef;padding-bottom:18px;margin-bottom:26px}.brand{font-size:1.3rem;font-weight:750;color:#0069c7}
+nav{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:12px}a{color:#0069c7;text-underline-offset:3px}
+nav a{display:inline-flex;align-items:center;min-height:44px}a:focus-visible{outline:3px solid #0069c7;outline-offset:4px}
+h1{font-size:clamp(1.55rem,5vw,2rem);line-height:1.35}h2{font-size:1.25rem;margin-top:2rem;line-height:1.45}
+p,h1,h2,a{overflow-wrap:anywhere}p{margin:0 0 1.15em}
+@media(max-width:600px){body{font-size:16px}main{width:100%;margin:0;padding:20px;border-radius:0}}
+@media(prefers-color-scheme:dark){body{background:#0f1115;color:#f2f4f8}main{background:#1b1e26}a,.brand{color:#6dbdff}header{border-color:#394656}}
+</style>
+</head>
+<body><main>
+<header><div class="brand">PocketLedger</div><nav aria-label="語言"><a href="privacy-zh-Hant.html" lang="zh-Hant" hreflang="zh-Hant">繁體中文</a><a href="privacy-en.html" lang="en" hreflang="en">English</a></nav></header>
+<article>
+<h1>PocketLedger 私隱政策</h1>
+<p>更新日期：2026年10月26日。適用版本：0.16.6 Beta。</p>
+<h2>聯絡與適用範圍</h2>
+<p>本政策說明 PocketLedger App 已實作的資料處理。私隱查詢及測試回饋：bw2629267443@gmail.com。開發者法律實體／地址尚待發佈者確認；本文件不代表已完成 Apple 或法律合規審查。</p>
+<h2>本機帳本與帳戶資料</h2>
+<p>交易、金額、分類、備註、帳戶名稱／UUID、初始餘額、退款及手續費關係、待確認草稿、通知證據與配對記錄，儲存在 App 私有容器的 JSON 檔案。原始交易／草稿可能保留通知文字，因此可能含姓名、帳號、收付款資訊或交易參考。估算餘額不是銀行即時餘額。PocketLedger 沒有自建銀行帳戶登入或伺服器同步帳本功能。</p>
+<h2>通知、SMS、Gmail、Wallet 與 Shortcuts</h2>
+<p>App 只處理你透過捷徑、截圖或貼字提供的內容，不直接讀取 SMS 資料庫、Gmail 信箱或 Wallet 帳戶。通知標題／副標題／內文、來源渠道及 App 等欄位取決於你提供的資料與系統能力，可能不完整。你需自行在 Shortcuts 啟用來源自動化及必要授權，可隨時關閉。銀行名稱及時間只是文字證據，不代表銀行身份、完成狀態或帳戶擁有權已驗證。</p>
+<h2>圖片與本機 AI</h2>
+<p>付款截圖由系統相片選擇器提供，OCR 使用 Apple Vision 在裝置辨認；本次檢查未發現 App 將選取圖片另行長期儲存的程式路徑，提取的交易文字可保存為草稿。App 檢查 Foundation Models 可用性，但目前自動分類建議函式回傳 nil，沒有實際模型分類呼叫。沒有整合雲端 AI API。</p>
+<h2>匯出、備份與可選雲端資料夾</h2>
+<p>手動 CSV 可含備註、來源、帳戶 UUID 及 TEST 標籤；完整 JSON 備份可含全部帳本、設定、草稿及通知證據，屬未加密檔案。加密 .plbackup 使用 AES-GCM；新格式以隨機 salt 及 PBKDF2-HMAC-SHA256 衍生密碼金鑰，舊格式仍可解密。密碼／金鑰不會保存為 App 偏好；忘記密碼沒有恢復服務。密碼強度、裝置及持有備份者均會影響保護程度。</p>
+<p>啟用分析通道並選擇資料夾後，App 可在啟動／回前景或你要求同步時，將分析 CSV 寫入該資料夾。內容包括日期、商戶、金額、幣種、分類、類型及付款方式，不含備註或通知原文；仍屬敏感財務資料。如果選擇 iCloud Drive、Google Drive 或其他雲端供應商資料夾，供應商可按其服務同步至外部及讓已獲授權的工具存取。App 不登入這些供應商，也沒有自己的背景雲端上傳工作。分析資料夾及 CSV 只供你和你自行選擇、授權的工具存取；此功能不會向 PocketLedger 發佈者提供該資料夾或 CSV 的存取權，也沒有發佈者控制的財務資料收集後端。關閉分析通道只停止其後寫入，不會撤回已匯出／已同步副本。 還原備份不會在你目前已關閉分析通道時，自動重新開啟同步。</p>
+<h2>購買驗證、第三方與問題回報</h2>
+<p>App 使用 Apple StoreKit 驗證 App 及購買權限；指定 TestFlight Beta 可有有限期免費 Pro 測試，不等同正式購買。相關驗證可能與 Apple 服務通訊，受 Apple 的資料政策約束；本 App 不向 StoreKit 傳送帳本內容。購買介面與正式商品仍未開放。本次原碼審查未發現第三方分析、廣告、追蹤 SDK 或自建網絡 API。</p>
+<p>問題回報分享只自動包含 App 版本及你輸入的描述，不附帳本或日誌；你自行選擇分享服務、收件人及是否送出。若主動寄信，開發者及所用電郵服務會收到你提供的內容。請勿傳完整銀行通知、帳號、電郵、姓名或交易參考。iCloud 捷徑連結由 Apple 託管；開啟外部網站／郵件服務亦適用該服務政策。</p>
+<h2>診斷、保存與刪除</h2>
+<p>接收日誌最多保留200條；其他帳本、待確認、已棄置草稿及通知樣本依現有功能保存，沒有統一自動到期刪除。診斷頁在公開 Release 編譯排除；內部建置可查看遮罩內容。遮罩是規則處理，並不保證所有姓名或其他可識別資訊均被移除。正式帳本內必要原文並非全數遮罩。</p>
+<p>還原前會在 App 私有容器保留復原副本，防止還原失敗；這些副本沒有自動保留期限。目前清除帳本動作不等於清除獨立診斷檔案、復原副本或你匯出的檔案，使用前請閱讀介面範圍。移除 App 可由系統移除其私有容器；卸載／保留資料等系統選項行為不同。外部供應商、收件人及已匯出備份的副本，必須另行管理及刪除。聯絡開發者不能遠端清除你手機或第三方持有的副本。</p>
+<h2>安全與限制</h2>
+<p>App 使用 Face ID／裝置驗證作介面鎖；它不等同為 ledger.json 加密。敏感本機寫入要求 iOS 的首次解鎖後檔案保護，以兼顧背景通知；實際效果取決於裝置、密碼及 iOS，未完成真機保護測試。核心資料檔案嘗試排除系統雲端備份，不能保證所有系統／外部副本均排除。沒有任何系統可保證絕對安全。升級、還原及分享前請自行保留合適備份。</p>
+<h2>私隱政策網站託管</h2>
+<p>公開政策網站使用 GitHub Pages 託管。瀏覽網站時，GitHub 可依其 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noreferrer">GitHub 私隱聲明</a> 處理 IP 位址、裝置及請求資訊。政策網頁本身沒有加入廣告、分析追蹤程式或外部字體；這不代表託管供應商沒有存取紀錄。網站不提供帳本上傳或收集表單。</p>
+<h2>政策變更</h2>
+<p>資料處理若有改變，會更新本文件日期及 App 內政策。發佈者資料如有更新，亦會在政策說明。</p>
+</article>
+</main></body></html>
